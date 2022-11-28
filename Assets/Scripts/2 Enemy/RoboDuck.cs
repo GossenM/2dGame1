@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoboDuck : MonoBehaviour
 {
@@ -111,13 +112,11 @@ public class RoboDuck : MonoBehaviour
         StartCoroutine(InvincibilityCoroutine());
         if (currentBossHP <= 0)
         {
-            //Instantiate overload #4
-            //1) the object you wanna spawn
-            //2) where you want to spawn it
-            //3) its initial rotation(identity , euler)
+            
             Instantiate(levelCrystal, transform.position, Quaternion.identity);
             Instantiate(Gold, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            SceneManager.LoadScene("Level2");
             
 
 

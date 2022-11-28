@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
      void Start()
     {
         StartCoroutine(SpawnItems());
-        StartCoroutine(SpawnRoboDuck(roboDuck, 1));
+        //StartCoroutine(SpawnRoboDuck(roboDuck, 1));
         if (HeroManager.isRave == true)
         {
             rave.SetActive(true);
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < numberOfBosses; i++)
             {
-                yield return new WaitForSeconds(100f);
+                yield return new WaitForSeconds(5f);
                 Vector3 bossSpawn = Random.insideUnitCircle.normalized * 10;
                 bossSpawn += player.transform.position;
                 GameObject enemyobject = Instantiate(bossEnemy, bossSpawn, Quaternion.identity);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6770394756663922894}
   - component: {fileID: 7652455795472580452}
   - component: {fileID: 8075694126427749718}
-  - component: {fileID: 5741186346667598079}
+  - component: {fileID: 3429524803497486570}
   m_Layer: 0
   m_Name: BossEnemy
   m_TagString: RoboDuck
@@ -141,20 +141,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737684191257e7f4ab916294932e1f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Julius: {fileID: 0}
+  player: {fileID: 0}
+  golemArm: {fileID: 7676036723712764566, guid: febdcbb2cf123cb4e8982e3ffa903ad7, type: 3}
   levelCrystal: {fileID: 2849027309730380942, guid: c931882ca924d0143ad3324170f8e623, type: 3}
   Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
   spriteRenderer: {fileID: 948246058321527542}
   playercamera: {fileID: 0}
-  BossHP: 200
+  BossHP: 100
   currentBossHP: 0
   isBoss: 1
-  speed: 0.5
-  baseSpeed: 0.5
+  speed: 1
+  baseSpeed: 1
   isTrackingPlayer: 1
   isInvincible: 0
---- !u!60 &5741186346667598079
-PolygonCollider2D:
+--- !u!61 &3429524803497486570
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -176,22 +177,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.6875, y: 0.34375}
-      - {x: 0.59375, y: 0.4375}
-      - {x: 0.1875, y: 0.71875}
-      - {x: -0.03125, y: 0.71875}
-      - {x: -0.25, y: 0.5}
-      - {x: -0.59375, y: 0.5}
-      - {x: -0.75, y: 0.1875}
-      - {x: -0.75, y: -0.6875}
-      - {x: -0.6875, y: -0.71875}
-      - {x: -0.46875, y: -0.71875}
-      - {x: -0.34375, y: -0.5625}
-      - {x: -0.21875, y: -0.71875}
-      - {x: 0.15625, y: -0.71875}
-      - {x: 0.375, y: -0.625}
-      - {x: 0.5625, y: -0.65625}
-      - {x: 0.75, y: -0.59375}
-      - {x: 0.75, y: 0.21875}
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.4375}
+  m_EdgeRadius: 0

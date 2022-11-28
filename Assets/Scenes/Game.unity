@@ -5223,7 +5223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063396, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614927488932, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_Enabled
@@ -12001,8 +12001,8 @@ MonoBehaviour:
   player: {fileID: 0}
   waves:
   - name: Merman
-    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
-    enemy2: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+    enemy2: {fileID: 0}
     count: 1
   timeBewteenWaves: 4
   waveCountdown: 5

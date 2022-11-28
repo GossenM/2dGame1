@@ -54,7 +54,7 @@ public class Katana : MonoBehaviour
                 enemy.Damage(1);
             }
         }
-        RoboDuck roboDuck = collision.GetComponent<RoboDuck>();
+        GolemBoss roboDuck = collision.GetComponent<GolemBoss>();
         if (roboDuck != null)
         {
             if (TitleManager.saveData.katanaDmgIncrease >= 1)

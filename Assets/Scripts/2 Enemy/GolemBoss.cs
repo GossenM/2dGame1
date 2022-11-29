@@ -44,11 +44,7 @@ public class GolemBoss : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentBossHP = BossHP;
-        if (isBoss)
-        {
-            //StartCoroutine(BossCameraCoroutine());
-            //BossVignetteFX();
-        }
+        
     }
 
 

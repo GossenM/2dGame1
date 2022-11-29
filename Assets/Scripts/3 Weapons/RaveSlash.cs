@@ -13,7 +13,7 @@ public class RaveSlash : MonoBehaviour
    
     void Update()
     {
-        transform.position += transform.right * 6 * Time.deltaTime;
+        transform.position += transform.right * 6 * Time.deltaTime * transform.localScale.x * -1;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

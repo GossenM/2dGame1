@@ -31,6 +31,7 @@ public class Rave : Julius
     protected override void Update()
     {
         base.Update();
+        SwordSlash();
     }
     public void SwordSlash()
     {
@@ -46,7 +47,8 @@ public class Rave : Julius
         if (Input.GetKeyDown(slashKey) && canFire)
         {
             canFire = false;
-            Instantiate(raveSlashPrefab, transform.position, Quaternion.identity);
+            var slash = Instantiate(raveSlashPrefab, transform.position, Quaternion.identity);
+            slash.transform.localScale = transform.localScale;
         }
     }
 

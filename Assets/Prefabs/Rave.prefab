@@ -282,8 +282,9 @@ MonoBehaviour:
   healthOrbs: 2
   healthOrbs50: 5
   isInvincible: 0
-  katana: {fileID: 0}
   raveSlashPrefab: {fileID: 0}
+  canFire: 0
+  timeBetweenFiring: 2
   slashKey: 32
 --- !u!1 &5726440614299326689
 GameObject:
@@ -417,7 +418,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510465732456857787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

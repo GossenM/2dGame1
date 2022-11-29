@@ -13,6 +13,7 @@ using Unity.Burst.CompilerServices;
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] Julius julius;
+    [SerializeField] Rave rave;
     [SerializeField] Button katanaDmgIncreaseBTN;
     [SerializeField] Button healthIncreaseBTN;
     [SerializeField] TMP_Text goldCoinsTXT;
@@ -147,7 +148,8 @@ public class TitleManager : MonoBehaviour
     //RaveLevelUpMenu
     public void RaveProjectileSlash()
     {
-
+        rave.canSlash = true;
+        LevelUpandPlay();
     }
     //PassiveUpgrades
     public void HealthIncrease()
@@ -183,14 +185,14 @@ public class TitleManager : MonoBehaviour
             julius.levelUpMenu.SetActive(false);
             Time.timeScale = 1;
             particleSystem.Play();
-            playerCamera.depthOfField.focalLength.Override(1); 
+            julius.playerCamera.depthOfField.focalLength.Override(1); 
         }
         else if(HeroManager.isRave == true)
         {
-            julius.RaveLevelUpMenu.SetActive(false);
+            rave.RaveLevelUpMenu.SetActive(false);
             Time.timeScale = 1;
             particleSystem.Play();
-            playerCamera.depthOfField.focalLength.Override(1);
+            rave.playerCamera.depthOfField.focalLength.Override(1);
         }
     }
     public void EndGameStatsReset()

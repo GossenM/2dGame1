@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (HeroManager.isJulius == true)
         {
             julius.SetActive(true);
+            
         }
         
         

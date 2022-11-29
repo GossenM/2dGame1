@@ -21,6 +21,7 @@ public class Rave : Julius
     public KeyCode slashKey = KeyCode.Space;
 
     internal Animator animator;
+    public bool canSlash = false;
 
     protected override void Start()
     {
@@ -35,20 +36,23 @@ public class Rave : Julius
     }
     public void SwordSlash()
     {
-        if (!canFire)
+        if (canSlash)
         {
-            timer += Time.deltaTime;
-            if (timer > timeBetweenFiring)
+            if (!canFire)
             {
-                canFire = true;
-                timer = 0;
+                timer += Time.deltaTime;
+                if (timer > timeBetweenFiring)
+                {
+                    canFire = true;
+                    timer = 0;
+                }
             }
-        }
-        if (Input.GetKeyDown(slashKey) && canFire)
-        {
-            canFire = false;
-            var slash = Instantiate(raveSlashPrefab, transform.position, Quaternion.identity);
-            slash.transform.localScale = transform.localScale;
+            if (Input.GetKeyDown(slashKey) && canFire)
+            {
+                canFire = false;
+                var slash = Instantiate(raveSlashPrefab, transform.position, Quaternion.identity);
+                slash.transform.localScale = transform.localScale;
+            } 
         }
     }
 

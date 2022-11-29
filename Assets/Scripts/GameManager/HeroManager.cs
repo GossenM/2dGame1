@@ -7,7 +7,7 @@ using static WaveSpawner;
 public class HeroManager : MonoBehaviour
 {
     public static bool isJulius = false;
-    public static bool isRave = false;
+    public static bool isRave = true;
     [SerializeField] Button raveButton;
     [SerializeField] Button juliusButton;
     Rave rave;
@@ -16,7 +16,7 @@ public class HeroManager : MonoBehaviour
 
     void Start()
     {
-        isRave = true;
+        
     }
 
     void Update()

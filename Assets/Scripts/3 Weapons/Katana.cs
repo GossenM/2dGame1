@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Katana : MonoBehaviour
-{
+public class Katana : BaseWeapon
+{ 
     //colider and appear and reappear
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider2D;
-    Rave rave;
-
+    
 
     void Start()
     {
@@ -27,7 +26,7 @@ public class Katana : MonoBehaviour
     {
         while (true)
         {
-            //transform.localScale = Vector3.one * level;
+            transform.localScale = Vector3.one * level;
             spriteRenderer.enabled = true ;
             boxCollider2D.enabled = true;
             yield return new WaitForSeconds(0.5f);

@@ -19,7 +19,7 @@ public class Julius : MonoBehaviour
 
     [SerializeField] TMP_Text levelDisplay;
     [SerializeField] TMP_Text goldDisplay;
-    [SerializeField] PlayerCamera playerCamera;
+    [SerializeField] public PlayerCamera playerCamera;
 
     Animator animator;
     Material material;

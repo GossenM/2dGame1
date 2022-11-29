@@ -13,6 +13,7 @@ public class Julius : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField] public GameObject levelUpMenu;
+    [SerializeField] public GameObject RaveLevelUpMenu;
 
     [SerializeField] public BaseWeapon[] weapons;
 
@@ -86,7 +87,14 @@ public class Julius : MonoBehaviour
 
             
             Time.timeScale = 0;
-            levelUpMenu.SetActive(true);
+            if (HeroManager.isJulius == true)
+            {
+                levelUpMenu.SetActive(true);
+            }
+            else if (HeroManager.isRave == true)
+            {
+                RaveLevelUpMenu.SetActive(true);
+            }
             audioSource.Play();
             playerCamera.depthOfField.focalLength.Override(150);
             

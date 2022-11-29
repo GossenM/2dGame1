@@ -81,11 +81,13 @@ public class Enemy : MonoBehaviour
                 Instantiate(Gold, transform.position, Quaternion.identity);
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                TitleManager.saveData.totalEnemiesKilled = TitleManager.saveData.totalEnemiesKilled + 1;
             }
             else
             {
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                TitleManager.saveData.totalEnemiesKilled = TitleManager.saveData.totalEnemiesKilled + 1;
             }
          
             

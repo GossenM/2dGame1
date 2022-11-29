@@ -77,15 +77,17 @@ public class TitleManager : MonoBehaviour
         }
     }
 
+    //GameMenuButtons
     public void StartBtn()
     {
+        EndGameStatsReset();
         SceneManager.LoadScene("Game");        
     }
     public void RetryBtn()
     {
+        EndGameStatsReset();
         SceneManager.LoadScene("Game");
     }
-
     public void UpgradeBtn()
     {
         SceneManager.LoadScene("Upgrade");
@@ -107,10 +109,12 @@ public class TitleManager : MonoBehaviour
     }
     public void ReturnBtn()
     {
+        EndGameStatsReset();
         SceneManager.LoadScene("Title");
         
     }
 
+    //JuliusLevelUpMenu
     public void KatanaLVL()
     {
         julius.weapons[0].levelUp();
@@ -127,6 +131,8 @@ public class TitleManager : MonoBehaviour
         julius.weapons[2].levelUp();
         LevelUpandPlay();
     }
+
+    //GeneralLevelUps
     public void HPBuffLVL()
     {
         julius.weapons[3].levelUp();
@@ -137,6 +143,13 @@ public class TitleManager : MonoBehaviour
         julius.weapons[4].levelUp();
         LevelUpandPlay();
     }
+
+    //RaveLevelUpMenu
+    public void RaveProjectileSlash()
+    {
+
+    }
+    //PassiveUpgrades
     public void HealthIncrease()
     {
         if (TitleManager.saveData.goldCoins < 25)
@@ -161,12 +174,28 @@ public class TitleManager : MonoBehaviour
             TitleManager.saveData.katanaDmgIncrease++;
         }
     }
+
+    //
     public void LevelUpandPlay()
     {
-        julius.levelUpMenu.SetActive(false);
-        Time.timeScale = 1;
-        particleSystem.Play();
-        playerCamera.depthOfField.focalLength.Override(1);
+        if (HeroManager.isJulius == true)
+        {
+            julius.levelUpMenu.SetActive(false);
+            Time.timeScale = 1;
+            particleSystem.Play();
+            playerCamera.depthOfField.focalLength.Override(1); 
+        }
+        else if(HeroManager.isRave == true)
+        {
+            julius.RaveLevelUpMenu.SetActive(false);
+            Time.timeScale = 1;
+            particleSystem.Play();
+            playerCamera.depthOfField.focalLength.Override(1);
+        }
+    }
+    public void EndGameStatsReset()
+    {
+        TitleManager.saveData.totalEnemiesKilled = 0;
     }
 
 }

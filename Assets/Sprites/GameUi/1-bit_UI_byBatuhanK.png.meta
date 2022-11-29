@@ -241,6 +241,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 1-bit_UI_byBatuhanK_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 202
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd60938ca33430408ff48058c58c8de
+      internalID: -249944207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -253,6 +274,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       1-bit_UI_byBatuhanK_0: -1476488014
+      1-bit_UI_byBatuhanK_6: -249944207
       1-bit_UI_byBatuhanK_5: -1394929968
       1-bit_UI_byBatuhanK_3: 1726658239
       1-bit_UI_byBatuhanK_2: 555061633

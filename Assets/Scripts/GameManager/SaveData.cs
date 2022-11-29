@@ -13,7 +13,8 @@ public class SaveData
     public int healthIncrease;
     //Katana damage increase 
     public int katanaDmgIncrease;
-
+    //enemies killed counter
+    public int totalEnemiesKilled;
 
     
 }

@@ -16,8 +16,7 @@ public class HeroManager : MonoBehaviour
 
     void Start()
     {
-        //rave = GameObject.FindGameObjectWithTag("Player").GetComponent<Rave>();
-        //julius = GameObject.FindGameObjectWithTag("Player").GetComponent<Julius>();
+        isRave = true;
     }
 
     void Update()

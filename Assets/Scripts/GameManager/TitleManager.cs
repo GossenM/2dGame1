@@ -95,7 +95,12 @@ public class TitleManager : MonoBehaviour
     {
         heroMenu.SetActive(true);
     }
-
+    public void ResetGoldBtn()
+    {
+        TitleManager.saveData.goldCoins = 0;
+        TitleManager.saveData.healthIncrease = 0;
+        TitleManager.saveData.katanaDmgIncrease = 0;
+    }
     public void QuitBtn()
     {
         Application.Quit(); 

@@ -16,12 +16,14 @@ public class Rave : Julius
 
     public bool canFire;
     private float timer;
-    public float timeBetweenFiring = 2;
+    public float timeBetweenFiring;
+    private float currentTimeBetweenFiring = 2;
 
     public KeyCode slashKey = KeyCode.Space;
 
     internal Animator animator;
     public bool canSlash = false;
+    internal int level;
 
     protected override void Start()
     {
@@ -52,7 +54,11 @@ public class Rave : Julius
                 canFire = false;
                 var slash = Instantiate(raveSlashPrefab, transform.position, Quaternion.identity);
                 slash.transform.localScale = transform.localScale;
-            } 
+            }
+            if (level > 1)
+            {
+                timeBetweenFiring = currentTimeBetweenFiring - (level / 4);
+            }
         }
     }
 

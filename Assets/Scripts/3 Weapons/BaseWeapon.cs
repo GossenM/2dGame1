@@ -5,7 +5,6 @@ using UnityEngine;
 public class BaseWeapon : MonoBehaviour
 {
     protected int level = 0;
-    [SerializeField] Julius player;
     
 
    internal void levelUp()

@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266cda74207531a49b83307804c1eb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 3359183538986731395}
+  enemy: {fileID: -7203042576146590282}
   foreground: {fileID: 1078493969803640932}
 --- !u!1 &2395842009103995323
 GameObject:
@@ -281,7 +281,6 @@ GameObject:
   - component: {fileID: 7516215393752114874}
   - component: {fileID: 3396969345599715890}
   - component: {fileID: 349748643638737468}
-  - component: {fileID: 3359183538986731395}
   - component: {fileID: 5119728924068018935}
   - component: {fileID: -7203042576146590282}
   m_Layer: 0
@@ -406,28 +405,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3359183538986731395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2395842009103995323}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e078be294ef324295ac032eedeee04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  Julius: {fileID: 0}
-  Rave: {fileID: 0}
-  CrystalPrefab: {fileID: 5306765820107583781, guid: 589f1859aacd8df4990e31f72f06f7a2, type: 3}
-  Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
-  spriteRenderer: {fileID: 7516215393752114874}
-  enemyHP: 10
-  enemyMaxHP: 10
-  isTrackingPlayer: 1
-  isInvincible: 0
 --- !u!95 &5119728924068018935
 Animator:
   serializedVersion: 4

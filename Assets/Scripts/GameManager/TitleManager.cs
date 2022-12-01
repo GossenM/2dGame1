@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.Burst.CompilerServices;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class TitleManager : MonoBehaviour
 {
@@ -133,24 +134,44 @@ public class TitleManager : MonoBehaviour
         LevelUpandPlay();
     }
 
-    //GeneralLevelUps
-    public void HPBuffLVL()
-    {
-        julius.weapons[3].levelUp();
-        LevelUpandPlay();
-    }
-    public void SpeedBuffLVL()
-    {
-        julius.weapons[4].levelUp();
-        LevelUpandPlay();
-    }
-
     //RaveLevelUpMenu
     public void RaveProjectileSlash()
     {
         rave.canSlash = true;
+        rave.level++;
         LevelUpandPlay();
     }
+    public void RaveKunaiSpawner()
+    {
+        rave.weapons[2].levelUp();
+        LevelUpandPlay();
+    }
+    //GeneralLevelUps
+    public void HPBuffLVL()
+    {
+        if (HeroManager.isJulius == true)
+        {
+            julius.weapons[3].levelUp();
+        }
+        else if (HeroManager.isRave == true)
+        {
+            rave.weapons[0].levelUp();
+        }
+        LevelUpandPlay();
+    }
+    public void SpeedBuffLVL()
+    {
+        if (HeroManager.isJulius == true)
+        {
+            julius.weapons[4].levelUp();
+        }
+        else if (HeroManager.isRave == true)
+        {
+            rave.weapons[1].levelUp();
+        }
+        LevelUpandPlay();
+    }
+
     //PassiveUpgrades
     public void HealthIncrease()
     {

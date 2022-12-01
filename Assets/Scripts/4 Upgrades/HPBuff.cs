@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class HPBuff : BaseWeapon
 {
-    [SerializeField] Julius player;
-    
+
+    [SerializeField] Julius julius;
+    [SerializeField] Rave rave;
+
+    void Start()
+    {
+        
+    }
     void Update()
     {
         if (level >= 1 )
         {
 
-            player.maxHp = player.currentMaxHp + (level * 2);
+            if(HeroManager.isJulius == true)
+            {
+                julius.maxHp = julius.currentMaxHp + (level * 2); 
+            }
+            else if(HeroManager.isRave == true)
+            {
+                rave.maxHp = rave.currentMaxHp + (level * 2); 
+            }
                        
         }
     }

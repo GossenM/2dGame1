@@ -23,12 +23,12 @@ public class RaveSlash : MonoBehaviour
         {
             enemy.Damage(2);
         }
-        GolemBoss roboDuck = collision.GetComponent<GolemBoss>();
-        if (roboDuck != null)
+        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
+        if (golemBoss != null)
         {
-            roboDuck.Damage(2);
+            golemBoss.Damage(2);
         }
-        
-        
+
+
     }
 }

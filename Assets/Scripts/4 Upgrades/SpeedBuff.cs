@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class SpeedBuff : BaseWeapon
 {
-    [SerializeField] Julius player;
+    [SerializeField] Julius julius;
+    [SerializeField] Rave rave;
 
+    void Start()
+    {
+        
+    }
     void Update()
     {
-        if (level <= 3)
-        { 
+        if (level >= 1)
+        {
 
-            player.speed = player.baseSpeed + level;
-            
+            if (HeroManager.isJulius == true)
+            {
+                julius.speed = julius.baseSpeed + level;
+            }
+            else if (HeroManager.isRave == true)
+            {
+                rave.speed = rave.baseSpeed + level;
+            }
+
         }
     }
 }

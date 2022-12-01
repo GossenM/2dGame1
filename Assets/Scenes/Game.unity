@@ -12014,10 +12014,26 @@ MonoBehaviour:
   player: {fileID: 0}
   waves:
   - name: Merman
-    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
-    enemy2: {fileID: 0}
+    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    enemy2: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
     count: 1
-  timeBewteenWaves: 4
+  - name: crawler
+    enemy: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
+    enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
+    count: 2
+  - name: zombie
+    enemy: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
+    enemy2: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
+    count: 3
+  - name: Vamp
+    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    enemy2: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    count: 1
+  - name: Giant
+    enemy: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
+    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
+    count: 2
+  timeBewteenWaves: 5
   waveCountdown: 5
 --- !u!1 &597226709
 GameObject:

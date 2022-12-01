@@ -198,6 +198,12 @@ public class TitleManager : MonoBehaviour
     public void EndGameStatsReset()
     {
         TitleManager.saveData.totalEnemiesKilled = 0;
+        TitleManager.saveData.totalMermanKilled = 0;
+        TitleManager.saveData.totalCrawlerKilled = 0;
+        TitleManager.saveData.totalZombieKilled = 0;
+        TitleManager.saveData.totalVampireKilled = 0;
+        TitleManager.saveData.totalGiantKilled = 0;
+        TitleManager.saveData.totalCrystals = 0;
     }
 
 }

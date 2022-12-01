@@ -24,6 +24,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: enemyMaxHP
       value: 10
       objectReference: {fileID: 0}
@@ -45,6 +49,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Name
+      value: Merman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+      propertyPath: m_TagString
       value: Merman
       objectReference: {fileID: 0}
     - target: {fileID: 3810273432741820507, guid: 73beea569377beb458feb71d59c03cf5, type: 3}

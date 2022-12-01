@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Path;
 using UnityEngine;
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Enemy : MonoBehaviour
     //public int currentEnemyHP;
     public bool isTrackingPlayer = true;
     public bool isInvincible;
+
+    GameObject[] merman;
 
 
     protected virtual void Start()
@@ -71,6 +74,7 @@ public class Enemy : MonoBehaviour
     public virtual void Damage(int damage)
     {
 
+        
         enemyHP -= damage;
         StartCoroutine(InvincibilityCoroutine());
         if (enemyHP <= 0)
@@ -81,16 +85,76 @@ public class Enemy : MonoBehaviour
                 Instantiate(Gold, transform.position, Quaternion.identity);
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                TitleManager.saveData.totalEnemiesKilled = TitleManager.saveData.totalEnemiesKilled + 1;
+                KilledEnemyStats();
+                
+                
+
             }
             else
             {
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                TitleManager.saveData.totalEnemiesKilled = TitleManager.saveData.totalEnemiesKilled + 1;
+                KilledEnemyStats();
+                
+                
+
             }
          
             
+        }
+    }
+    public void KilledEnemyStats()
+    {
+        TitleManager.saveData.totalEnemiesKilled ++;
+        if (gameObject.tag == "Merman")
+        {
+            TitleManager.saveData.totalMermanKilled ++;
+        }
+        else if (gameObject.tag == "Crawler")
+        {
+            TitleManager.saveData.totalCrawlerKilled ++;
+        }
+        else if (gameObject.tag == "Zombie")
+        {
+            TitleManager.saveData.totalZombieKilled ++;
+        }
+        else if (gameObject.tag == "Vampire")
+        {
+            TitleManager.saveData.totalVampireKilled ++;
+        }
+        else if (gameObject.tag == "Giant")
+        {
+            TitleManager.saveData.totalGiantKilled ++;
+        }
+    }
+
+    public void Lol()
+    {
+        TitleManager.saveData.totalEnemiesKilled = TitleManager.saveData.totalEnemiesKilled + 1;
+        GameObject merman = GameObject.FindGameObjectWithTag("Merman");
+        GameObject crawler = GameObject.FindGameObjectWithTag("Crawler");
+        GameObject zombie = GameObject.FindGameObjectWithTag("Zombie");
+        GameObject vampire = GameObject.FindGameObjectWithTag("Vampire");
+        GameObject giant = GameObject.FindGameObjectWithTag("Giant");
+        if (merman == null)
+        {
+            TitleManager.saveData.totalMermanKilled = TitleManager.saveData.totalMermanKilled + 1;
+        }
+        if (crawler == null)
+        {
+            TitleManager.saveData.totalCrawlerKilled = TitleManager.saveData.totalCrawlerKilled + 1;
+        }
+        else if (zombie == null)
+        {
+            TitleManager.saveData.totalZombieKilled = TitleManager.saveData.totalZombieKilled + 1;
+        }
+        else if (vampire == null)
+        {
+            TitleManager.saveData.totalVampireKilled = TitleManager.saveData.totalVampireKilled + 1;
+        }
+        else if (giant == null)
+        {
+            TitleManager.saveData.totalGiantKilled = TitleManager.saveData.totalGiantKilled + 1;
         }
     }
 

@@ -12,6 +12,7 @@ public class Crystal : MonoBehaviour
         {
             player.AddExp();
             Destroy(gameObject);
+            TitleManager.saveData.totalCrystals = TitleManager.saveData.totalCrystals + 1;
         }
     }
 }

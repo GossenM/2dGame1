@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733270921127168930, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -38,6 +42,10 @@ PrefabInstance:
     - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Name
       value: GiantEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+      propertyPath: m_TagString
+      value: Giant
       objectReference: {fileID: 0}
     - target: {fileID: 3810273432741820507, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Size.x
@@ -198,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   Julius: {fileID: 0}
+  Rave: {fileID: 0}
   CrystalPrefab: {fileID: 5306765820107583781, guid: 589f1859aacd8df4990e31f72f06f7a2, type: 3}
   Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
   spriteRenderer: {fileID: 7516215393752114874}

@@ -8,6 +8,11 @@ TagManager:
   - RoboDuck
   - Undefined
   - crystal
+  - Merman
+  - Giant
+  - Crawler
+  - Vampire
+  - Zombie
   layers:
   - Default
   - TransparentFX

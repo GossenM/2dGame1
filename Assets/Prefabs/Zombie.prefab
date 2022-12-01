@@ -29,19 +29,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2437539292582955948, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Size.x
-      value: 0.48194516
+      value: 0.5213765
       objectReference: {fileID: 0}
     - target: {fileID: 2437539292582955948, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Size.y
-      value: 0.34771645
+      value: 0.99803287
       objectReference: {fileID: 0}
     - target: {fileID: 2437539292582955948, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Offset.x
-      value: 0.07188475
+      value: 0.05216907
       objectReference: {fileID: 0}
     - target: {fileID: 2437539292582955948, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Offset.y
-      value: 0.31051677
+      value: -0.014641434
       objectReference: {fileID: 0}
     - target: {fileID: 2437539292582955948, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -53,6 +53,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
       propertyPath: m_Name
+      value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+      propertyPath: m_TagString
       value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 3810273432741820507, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
@@ -145,4 +149,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3810273432741820507, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+    - {fileID: 8476914187649797641, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73beea569377beb458feb71d59c03cf5, type: 3}

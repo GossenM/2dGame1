@@ -269,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5726440614252063393}
   levelUpMenu: {fileID: 0}
+  RaveLevelUpMenu: {fileID: 0}
   weapons: []
   levelDisplay: {fileID: 0}
   goldDisplay: {fileID: 0}
@@ -276,9 +277,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   speed: 8
   baseSpeed: 8
-  playerHP: 9
-  maxHp: 9
-  currentMaxHp: 9
+  playerHP: 3
+  maxHp: 3
+  currentMaxHp: 3
   healthOrbs: 2
   healthOrbs50: 5
   isInvincible: 0
@@ -286,6 +287,7 @@ MonoBehaviour:
   canFire: 0
   timeBetweenFiring: 2
   slashKey: 32
+  canSlash: 0
 --- !u!1 &5726440614299326689
 GameObject:
   m_ObjectHideFlags: 0

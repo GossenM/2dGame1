@@ -21,6 +21,7 @@ public class Scythe : BaseWeapon
         {
             roboDuck.Damage(2);
         }
-        
+       
+
     }
 }

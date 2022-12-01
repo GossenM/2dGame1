@@ -203,6 +203,7 @@ public class TitleManager : MonoBehaviour
         TitleManager.saveData.totalZombieKilled = 0;
         TitleManager.saveData.totalVampireKilled = 0;
         TitleManager.saveData.totalGiantKilled = 0;
+        TitleManager.saveData.totalDemonKilled = 0;
         TitleManager.saveData.totalCrystals = 0;
     }
 

@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.87524, y: -536.8277}
+  m_AnchoredPosition: {x: -960.85016, y: -536.8232}
   m_SizeDelta: {x: 0.76365, y: 0.1322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1864472548442377165
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266cda74207531a49b83307804c1eb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4158595742450150134}
+  enemy: {fileID: 2356574981316964671}
   foreground: {fileID: 1864472549578616081}
 --- !u!1 &1864472549578616092
 GameObject:
@@ -269,6 +269,77 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &3007583380732966712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258080097507173544}
+  - component: {fileID: 3781768520080638553}
+  - component: {fileID: 3906153212292324419}
+  m_Layer: 0
+  m_Name: AxeSwing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258080097507173544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007583380732966712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7427436859479332550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3781768520080638553
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007583380732966712}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.86925036, y: 0.029935718}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0948855, y: 1.5182416}
+  m_EdgeRadius: 0
+--- !u!114 &3906153212292324419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007583380732966712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd8ffbd36f75f041a6a0ae0e9ddf715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3897802770749570254
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,12 +352,11 @@ GameObject:
   - component: {fileID: 9180180441649335247}
   - component: {fileID: 4038619414844217159}
   - component: {fileID: 1437481587218798409}
-  - component: {fileID: 4158595742450150134}
   - component: {fileID: 7510498476128487762}
-  - component: {fileID: 3692932136644978195}
+  - component: {fileID: 2356574981316964671}
   m_Layer: 0
   m_Name: Imp Demon
-  m_TagString: Giant
+  m_TagString: Demon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,6 +374,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1864472550069705487}
+  - {fileID: 258080097507173544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -350,7 +421,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: 1073444717, guid: 24ac0c346278e0d4b841814873bb2712, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.22, y: 0.31}
@@ -372,7 +443,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017748177, y: -0.017470509}
+  m_Offset: {x: 0.09312004, y: -0.017470479}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -383,7 +454,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.79503286, y: 1.2128761}
+  m_Size: {x: 0.6027044, y: 1.2128761}
   m_EdgeRadius: 0
 --- !u!50 &1437481587218798409
 Rigidbody2D:
@@ -406,28 +477,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4158595742450150134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3897802770749570254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e078be294ef324295ac032eedeee04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  Julius: {fileID: 0}
-  Rave: {fileID: 0}
-  CrystalPrefab: {fileID: 5306765820107583781, guid: 589f1859aacd8df4990e31f72f06f7a2, type: 3}
-  Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
-  spriteRenderer: {fileID: 9180180441649335247}
-  enemyHP: 10
-  enemyMaxHP: 10
-  isTrackingPlayer: 1
-  isInvincible: 0
 --- !u!95 &7510498476128487762
 Animator:
   serializedVersion: 4
@@ -438,7 +487,7 @@ Animator:
   m_GameObject: {fileID: 3897802770749570254}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f46e1a0f155f194386b471e7e8a5aad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -448,7 +497,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3692932136644978195
+--- !u!114 &2356574981316964671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,17 +506,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3897802770749570254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995d2e04f7a35bd418a39b48f3735fdb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5140964303823f3459556885d6fde523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   Julius: {fileID: 0}
   Rave: {fileID: 0}
   CrystalPrefab: {fileID: 5306765820107583781, guid: 589f1859aacd8df4990e31f72f06f7a2, type: 3}
   Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
   spriteRenderer: {fileID: 9180180441649335247}
-  enemyHP: 20
-  enemyMaxHP: 20
+  enemyHP: 30
+  enemyMaxHP: 30
   isTrackingPlayer: 1
   isInvincible: 0
-  knifePrefab: {fileID: 2758830594200908802, guid: b6037c3237b716e4fb009afa84e23285, type: 3}

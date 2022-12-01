@@ -65,6 +65,7 @@ public class Katana : BaseWeapon
                 roboDuck.Damage(1);
             }
         }
+        
     } 
    
 }

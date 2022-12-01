@@ -11,6 +11,7 @@ public class EndGameScene : MonoBehaviour
     [SerializeField] TMP_Text zombiesKilledDisplay;
     [SerializeField] TMP_Text vampiresKilledDisplay;
     [SerializeField] TMP_Text giantKilledDisplay;
+    [SerializeField] TMP_Text demonKilledDisplay;
 
     [SerializeField] TMP_Text goldCoinsTXT;
     [SerializeField] TMP_Text totalCrystals;
@@ -22,6 +23,7 @@ public class EndGameScene : MonoBehaviour
         zombiesKilledDisplay.text = TitleManager.saveData.totalZombieKilled.ToString();
         vampiresKilledDisplay.text = TitleManager.saveData.totalVampireKilled.ToString();
         giantKilledDisplay.text = TitleManager.saveData.totalGiantKilled.ToString();
+        demonKilledDisplay.text = TitleManager.saveData.totalDemonKilled.ToString();
 
         goldCoinsTXT.text = TitleManager.saveData.goldCoins.ToString();
         totalCrystals.text = TitleManager.saveData.totalCrystals.ToString();

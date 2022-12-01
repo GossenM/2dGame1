@@ -23,7 +23,9 @@ public class PlayerCamera : MonoBehaviour
     internal ColorAdjustments colorAdjustments;
 
     private void Start()
-    {        
+    {
+        julius = GetComponent<Julius>();
+        rave = GetComponent<Rave>();
         volume = GetComponent<Volume>();
         volume.profile.TryGet(out vignette);
         volume.profile.TryGet(out depthOfField);
@@ -41,7 +43,8 @@ public class PlayerCamera : MonoBehaviour
                 float cameraZ = transform.position.z;
                 var targetPosition = new Vector3(playerX, playerY, cameraZ);
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.unscaledDeltaTime);
-                //transform.position = targetPosition + shakeOffset;
+                vignette.intensity.Override(1 - julius.GetHpRatio());
+                transform.position = targetPosition + shakeOffset;
             }
         } 
         if (HeroManager.isRave == true)
@@ -54,15 +57,11 @@ public class PlayerCamera : MonoBehaviour
                 float cameraZ = transform.position.z;
                 var targetPosition = new Vector3(playerX, playerY, cameraZ);
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.unscaledDeltaTime);
-                //transform.position = targetPosition + shakeOffset;
+                vignette.intensity.Override(1 - rave.GetHpRatio());
+                transform.position = targetPosition + shakeOffset;
             }
         }
-        //var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -10);
-        //transform.position = Vector3.MoveTowards(transform.position, targetPosition, cameraSpeed * Time.unscaledDeltaTime);
-        //vignette.intensity.Override(0.5f - julius.GetHpRatio());
-        //Vector3 wantedPosition = target.position + offset;
-        //Vector3 smoothedPosition = Vector3.Lerp(transform.position, wantedPosition, smoothSpeed);
-        //transform.position = smoothedPosition + shakeOffset;
+        
 
     }
 

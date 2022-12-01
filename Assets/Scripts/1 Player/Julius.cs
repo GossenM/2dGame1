@@ -48,7 +48,7 @@ public class Julius : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         //Hp set up 
-        maxHp = maxHp; // TitleManager.saveData.healthIncrease;
+        maxHp =maxHp + TitleManager.saveData.healthIncrease;
         playerHP = maxHp;
         //shader materiel set up
         material = spriteRenderer.material;
@@ -133,7 +133,7 @@ public class Julius : MonoBehaviour
             
             StartCoroutine(InvincibilityCoroutine());
             isInvincible = true;
-            //playerCamera.StartShake(0.05f, 0.2f);
+            playerCamera.StartShake(0.05f, 0.2f);
 
 
             if (--playerHP == 0)

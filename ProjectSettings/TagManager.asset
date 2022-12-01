@@ -13,6 +13,7 @@ TagManager:
   - Crawler
   - Vampire
   - Zombie
+  - Demon
   layers:
   - Default
   - TransparentFX

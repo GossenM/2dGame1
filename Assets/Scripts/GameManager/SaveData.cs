@@ -21,6 +21,7 @@ public class SaveData
     public int totalCrawlerKilled;
     public int totalVampireKilled;
     public int totalGiantKilled;
+    public int totalDemonKilled;
 
     
 }

@@ -28,5 +28,7 @@ public class RaveSlash : MonoBehaviour
         {
             roboDuck.Damage(2);
         }
+        
+        
     }
 }

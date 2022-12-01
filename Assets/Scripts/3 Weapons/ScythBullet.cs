@@ -37,6 +37,7 @@ public class ScythBullet : BaseWeapon
         {
             roboDuck.Damage(2);
         }
-        
+       
+
     }
 }

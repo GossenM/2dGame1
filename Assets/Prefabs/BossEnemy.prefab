@@ -147,7 +147,7 @@ MonoBehaviour:
   Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
   spriteRenderer: {fileID: 948246058321527542}
   playercamera: {fileID: 0}
-  BossHP: 10
+  BossHP: 100
   currentBossHP: 0
   isBoss: 1
   speed: 1

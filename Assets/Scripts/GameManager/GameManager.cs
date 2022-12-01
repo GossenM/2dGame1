@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Enemy enemy;
 
-    [SerializeField] GameObject roboDuck;
+    [SerializeField] GameObject golemBoss;
 
     [SerializeField] TMP_Text timerText;
 
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
      void Start()
     {
         StartCoroutine(SpawnItems());
-        //StartCoroutine(SpawnRoboDuck(roboDuck, 1));
+        StartCoroutine(SpawnGolemBoss(golemBoss, 1));
         if (HeroManager.isRave == true)
         {
             rave.SetActive(true);
@@ -69,13 +69,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    IEnumerator SpawnRoboDuck(GameObject bossEnemy, int numberOfBosses,bool isTracking = true)
+    IEnumerator SpawnGolemBoss(GameObject bossEnemy, int numberOfBosses,bool isTracking = true)
     {
         while (true)
         {
             for (int i = 0; i < numberOfBosses; i++)
             {
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(50f);
                 Vector3 bossSpawn = Random.insideUnitCircle.normalized * 10;
                 bossSpawn += player.transform.position;
                 GameObject enemyobject = Instantiate(bossEnemy, bossSpawn, Quaternion.identity);

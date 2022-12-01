@@ -60,6 +60,7 @@ public class EnergyBall : BaseWeapon
             roboDuck.Damage(2);
         }
         
+        
     }
    
 

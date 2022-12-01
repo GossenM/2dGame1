@@ -11977,7 +11977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemy: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
-  roboDuck: {fileID: 659671282139628619, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+  golemBoss: {fileID: 0}
   timerText: {fileID: 1188104535}
   healthOrbs: {fileID: 7249512719313413497, guid: a0109274614d39842a8507230cbfe41c, type: 3}
   healthOrbs50: {fileID: 4185950175220717326, guid: a40054a357ff8b641b9fa0291ad6d1c9, type: 3}
@@ -12014,12 +12014,12 @@ MonoBehaviour:
   player: {fileID: 0}
   waves:
   - name: Merman
-    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
-    enemy2: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    enemy: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
+    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
     count: 1
   - name: crawler
     enemy: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
+    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
     count: 2
   - name: zombie
     enemy: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}

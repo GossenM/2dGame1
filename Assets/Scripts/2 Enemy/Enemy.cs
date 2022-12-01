@@ -86,21 +86,13 @@ public class Enemy : MonoBehaviour
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 KilledEnemyStats();
-                
-                
-
             }
             else
             {
                 Instantiate(CrystalPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 KilledEnemyStats();
-                
-                
-
-            }
-         
-            
+            }  
         }
     }
     public void KilledEnemyStats()
@@ -125,6 +117,10 @@ public class Enemy : MonoBehaviour
         else if (gameObject.tag == "Giant")
         {
             TitleManager.saveData.totalGiantKilled ++;
+        }
+        else if (gameObject.tag == "Demon")
+        {
+            TitleManager.saveData.totalDemonKilled++;
         }
     }
 

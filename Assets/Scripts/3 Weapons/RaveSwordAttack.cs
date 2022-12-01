@@ -29,6 +29,8 @@ public class RaveSwordAttack : MonoBehaviour
         {
            roboDuck.Damage(5);
         }
+        
+        
     }
 
 }

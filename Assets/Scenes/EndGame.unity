@@ -1894,6 +1894,7 @@ MonoBehaviour:
   zombiesKilledDisplay: {fileID: 1976879447}
   vampiresKilledDisplay: {fileID: 1605015289}
   giantKilledDisplay: {fileID: 1897894594}
+  demonKilledDisplay: {fileID: 1774075670}
   goldCoinsTXT: {fileID: 91311080}
   totalCrystals: {fileID: 1399802309}
 --- !u!1001 &1270961979
@@ -2672,7 +2673,7 @@ GameObject:
   - component: {fileID: 1774075671}
   - component: {fileID: 1774075670}
   m_Layer: 5
-  m_Name: GiantKilled
+  m_Name: DemonKilled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

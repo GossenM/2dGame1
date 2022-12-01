@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
- public class GiantKnife : MonoBehaviour
+public class AxeSwing : MonoBehaviour
 {
-    
-    //internal GameObject target;
-
+    BoxCollider2D boxCollider2D;
+    // Start is called before the first frame update
     void Start()
     {
-        //target = GameObject.FindGameObjectWithTag("Player");
+       
     }
 
     void Update()
     {
-        transform.position += transform.right * 6 * Time.deltaTime;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

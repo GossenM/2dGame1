@@ -48,19 +48,23 @@ public class EnergyBall : BaseWeapon
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy != null)
         {
-            Debug.Log("ball hits enemy");
-            enemy.Damage(2);        
+            enemy.Damage(2);
         }
-        SoulSlicer roboDuck = collision.GetComponent<SoulSlicer>();
-        if(roboDuck != null)
+        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
+        if (golemBoss != null)
         {
-            roboDuck.Damage(2);
+            golemBoss.Damage(2);
         }
-        
-        
+        SoulSlicer soulSlicer = collision.GetComponent<SoulSlicer>();
+        if(soulSlicer != null)
+        {
+            soulSlicer.Damage(2);
+        }
+
+
     }
    
 

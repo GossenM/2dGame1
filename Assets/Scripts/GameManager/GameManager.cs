@@ -22,8 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject julius;
     [SerializeField] GameObject rave;
 
-    internal static Scene currentscene = SceneManager.GetActiveScene();
-    string sceneName = currentscene.name;
+    
 
 
 
@@ -47,7 +46,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-
+        Scene currentscene = SceneManager.GetActiveScene();
+        string sceneName = currentscene.name;
         int seconds = (int)Time.timeSinceLevelLoad;
         timerText.text = seconds.ToString();
         int minutes = seconds / 60;
@@ -69,15 +69,15 @@ public class GameManager : MonoBehaviour
         }
 
         
-        if (sceneName == "Level2")
-        {
-            StartCoroutine(FinalArenaCountdown()); 
-        }
-        if (sceneName == "FinalBossArena")
-        {
-            StopCoroutine(FinalArenaCountdown());
-            StartCoroutine(SpawnSoulSlicer(soulSlicer, 1));
-        }
+        //if (sceneName == "Level2")
+        //{
+        //    StartCoroutine(FinalArenaCountdown()); 
+        //}
+        //if (sceneName == "FinalBossArena")
+        //{
+        //    StopCoroutine(FinalArenaCountdown());
+        //    StartCoroutine(SpawnSoulSlicer(soulSlicer, 1));
+        //}
 
 
     }
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < numberOfBosses; i++)
             {
-                yield return new WaitForSeconds(30f);
+                yield return new WaitForSeconds(60f);
                 Vector3 bossSpawn = Random.insideUnitCircle.normalized * 10;
                 bossSpawn += player.transform.position;
                 GameObject enemyobject = Instantiate(bossEnemy, bossSpawn, Quaternion.identity);

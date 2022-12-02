@@ -24,13 +24,18 @@ public class RaveSwordAttack : MonoBehaviour
         {
             enemy.Damage(5);
         }
-        SoulSlicer roboDuck = collision.GetComponent<SoulSlicer>();
-        if (roboDuck != null)
+        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
+        if (golemBoss != null)
         {
-           roboDuck.Damage(5);
+            golemBoss.Damage(5);
         }
-        
-        
+        SoulSlicer soulSlicer = collision.GetComponent<SoulSlicer>();
+        if (soulSlicer != null)
+        {
+            soulSlicer.Damage(5);
+        }
+
+
     }
 
 }

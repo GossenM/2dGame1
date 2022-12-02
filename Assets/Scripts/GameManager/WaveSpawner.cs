@@ -75,7 +75,7 @@ public class WaveSpawner : MonoBehaviour
         else
         {
             nextWave++;
-            _wave.count = _wave.count + 2;
+            _wave.count = _wave.count + 1;
 
         }
 

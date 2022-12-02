@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BossHpBar : MonoBehaviour
 {
-    [SerializeField] SoulSlicer soulSlicer;
+    [SerializeField] GolemBoss soulSlicer;
     [SerializeField] GolemBoss golemBoss;
     [SerializeField] Image foreground;
     void Start()

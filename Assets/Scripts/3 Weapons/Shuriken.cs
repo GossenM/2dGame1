@@ -103,13 +103,16 @@ public class Shuriken : BaseWeapon
         if (enemy != null)
         {
             enemy.Damage(3);
- 
         }
-        SoulSlicer golemBoss = collision.GetComponent<SoulSlicer>();
+        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
         if (golemBoss != null)
         {
             golemBoss.Damage(3);
-            
+        }
+        SoulSlicer soulSlicer = collision.GetComponent<SoulSlicer>();
+        if (soulSlicer != null)
+        {
+            soulSlicer.Damage(3);
         }
 
 

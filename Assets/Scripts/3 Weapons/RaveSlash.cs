@@ -23,10 +23,15 @@ public class RaveSlash : MonoBehaviour
         {
             enemy.Damage(2);
         }
-        SoulSlicer golemBoss = collision.GetComponent<SoulSlicer>();
+        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
         if (golemBoss != null)
         {
             golemBoss.Damage(2);
+        }
+        SoulSlicer soulSlicer = collision.GetComponent<SoulSlicer>();
+        if (soulSlicer != null)
+        {
+            soulSlicer.Damage(2);
         }
 
 

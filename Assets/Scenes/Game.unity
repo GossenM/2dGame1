@@ -12202,11 +12202,11 @@ MonoBehaviour:
   - name: crawler
     enemy: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
     enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    count: 5
+    count: 2
   - name: zombie
     enemy: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
     enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    count: 3
+    count: 2
   - name: Vamp
     enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
     enemy2: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
@@ -12214,8 +12214,8 @@ MonoBehaviour:
   - name: Giant
     enemy: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
     enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
-    count: 2
-  timeBewteenWaves: 5
+    count: 1
+  timeBewteenWaves: 9
   waveCountdown: 5
 --- !u!114 &583392532 stripped
 MonoBehaviour:

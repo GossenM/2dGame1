@@ -53,7 +53,7 @@ public class Katana : BaseWeapon
                 enemy.Damage(1);
             }
         }
-        SoulSlicer roboDuck = collision.GetComponent<SoulSlicer>();
+        GolemBoss roboDuck = collision.GetComponent<GolemBoss>();
         if (roboDuck != null)
         {
             if (TitleManager.saveData.katanaDmgIncrease >= 1)
@@ -65,7 +65,19 @@ public class Katana : BaseWeapon
                 roboDuck.Damage(1);
             }
         }
-        
+        SoulSlicer soulSlicer = collision.GetComponent<SoulSlicer>();
+        if (soulSlicer != null)
+        {
+            if (TitleManager.saveData.katanaDmgIncrease >=  1)
+            {
+                soulSlicer.Damage(2);
+            }
+            else
+            {
+                soulSlicer.Damage(1);
+            }
+        }
+
     } 
    
 }

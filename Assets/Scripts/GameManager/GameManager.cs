@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Enemy enemy;
 
     [SerializeField] GameObject golemBoss;
+    [SerializeField] GameObject soulSlicer;
 
     [SerializeField] TMP_Text timerText;
 
@@ -20,11 +22,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject julius;
     [SerializeField] GameObject rave;
 
+    internal static Scene currentscene = SceneManager.GetActiveScene();
+    string sceneName = currentscene.name;
 
-    
-   
 
-     void Start()
+
+    public void Start()
     {
         StartCoroutine(SpawnItems());
         StartCoroutine(SpawnGolemBoss(golemBoss, 1));
@@ -38,7 +41,8 @@ public class GameManager : MonoBehaviour
             julius.SetActive(true);
             
         }
-        
+
+        player = GameObject.FindGameObjectWithTag("Player");
         
     }
     private void Update()
@@ -63,19 +67,49 @@ public class GameManager : MonoBehaviour
         {
             timerText.text = "0" + minutes.ToString() + ":" + seconds.ToString();
         }
+
         
-        
-         
+        if (sceneName == "Level2")
+        {
+            StartCoroutine(FinalArenaCountdown()); 
+        }
+        if (sceneName == "FinalBossArena")
+        {
+            StopCoroutine(FinalArenaCountdown());
+            StartCoroutine(SpawnSoulSlicer(soulSlicer, 1));
+        }
+
 
     }
 
+    IEnumerator FinalArenaCountdown()
+    {
+        yield return new WaitForSeconds(30f);
+        SceneManager.LoadScene("FinalBossArena");
+    }
     IEnumerator SpawnGolemBoss(GameObject bossEnemy, int numberOfBosses,bool isTracking = true)
     {
         while (true)
         {
             for (int i = 0; i < numberOfBosses; i++)
             {
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(30f);
+                Vector3 bossSpawn = Random.insideUnitCircle.normalized * 10;
+                bossSpawn += player.transform.position;
+                GameObject enemyobject = Instantiate(bossEnemy, bossSpawn, Quaternion.identity);
+                Enemy enemy = enemyobject.GetComponent<Enemy>();
+                enemy.isTrackingPlayer = isTracking;
+                
+            }
+        }
+    }
+    IEnumerator SpawnSoulSlicer(GameObject bossEnemy, int numberOfBosses,bool isTracking = true)
+    {
+        while (true)
+        {
+            for (int i = 0; i < numberOfBosses; i++)
+            {
+                yield return new WaitForSeconds(5f);
                 Vector3 bossSpawn = Random.insideUnitCircle.normalized * 10;
                 bossSpawn += player.transform.position;
                 GameObject enemyobject = Instantiate(bossEnemy, bossSpawn, Quaternion.identity);

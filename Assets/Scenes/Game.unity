@@ -262,7 +262,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kunai
+  m_text: 'Shuriken
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da4a2b936bb0f324eb3f818489777cf2, type: 2}
   m_sharedMaterial: {fileID: -7192400805115336303, guid: da4a2b936bb0f324eb3f818489777cf2, type: 2}
@@ -5233,6 +5235,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 392212886177350513, guid: 8196800150af5c046a33b91d17a82981, type: 3}
+      propertyPath: m_Name
+      value: ShurikenSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 392212886177350513, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -5324,6 +5330,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.12849784
       objectReference: {fileID: 0}
+    - target: {fileID: 3721185307886992431, guid: 8196800150af5c046a33b91d17a82981, type: 3}
+      propertyPath: shurikenTop
+      value: 
+      objectReference: {fileID: 5422788398203823532, guid: e1a436a79f401e0478f9877e3810f097, type: 3}
+    - target: {fileID: 3721185307886992431, guid: 8196800150af5c046a33b91d17a82981, type: 3}
+      propertyPath: shurikenBottom
+      value: 
+      objectReference: {fileID: 102853769134743728, guid: 2e2df087c0209f34c90d1873ffad5b59, type: 3}
+    - target: {fileID: 3721185307886992431, guid: 8196800150af5c046a33b91d17a82981, type: 3}
+      propertyPath: shurikenMiddle
+      value: 
+      objectReference: {fileID: 8992373934708758631, guid: 1797e1607ca87b24c9871464bae822cc, type: 3}
     - target: {fileID: 4618757521730029442, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -12141,6 +12159,7 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
   golemBoss: {fileID: 659671282139628619, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+  soulSlicer: {fileID: 0}
   timerText: {fileID: 1188104535}
   healthOrbs: {fileID: 7249512719313413497, guid: a0109274614d39842a8507230cbfe41c, type: 3}
   healthOrbs50: {fileID: 4185950175220717326, guid: a40054a357ff8b641b9fa0291ad6d1c9, type: 3}
@@ -15643,7 +15662,7 @@ GameObject:
   - component: {fileID: 1251372118}
   - component: {fileID: 1251372117}
   m_Layer: 5
-  m_Name: KunaiSpawner
+  m_Name: ShurikenSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15716,7 +15735,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1271004083}
         m_TargetAssemblyTypeName: TitleManager, Assembly-CSharp
-        m_MethodName: RaveKunaiSpawner
+        m_MethodName: RaveShurikenSpawner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -53,7 +53,7 @@ public class Katana : BaseWeapon
                 enemy.Damage(1);
             }
         }
-        GolemBoss roboDuck = collision.GetComponent<GolemBoss>();
+        SoulSlicer roboDuck = collision.GetComponent<SoulSlicer>();
         if (roboDuck != null)
         {
             if (TitleManager.saveData.katanaDmgIncrease >= 1)

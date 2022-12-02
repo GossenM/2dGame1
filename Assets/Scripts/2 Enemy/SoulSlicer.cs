@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GolemBoss : MonoBehaviour
+public class SoulSlicer : MonoBehaviour
 {
 
     [SerializeField] GameObject player;
-    [SerializeField] GameObject golemArm;
 
     [SerializeField] GameObject levelCrystal;
     [SerializeField] GameObject Gold;
 
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] PlayerCamera playercamera;
-    
+
 
     [SerializeField] internal int BossHP;
     [SerializeField] internal int currentBossHP;
@@ -28,14 +27,14 @@ public class GolemBoss : MonoBehaviour
     public bool isInvincible;
 
     private Animator animator;
-    enum GolemState : int
+    enum SoulState : int
     {
         Idle = 0,
-        Walking = 1,
+        Running = 1,
         Attacking = 2,
     }
 
-    GolemState golemState = GolemState.Idle;
+    SoulState soulState = SoulState.Idle;
     float waitTimer = 2f;
 
 
@@ -44,24 +43,24 @@ public class GolemBoss : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentBossHP = BossHP;
-        
+
     }
 
 
 
     void Update()
     {
-        switch (golemState)
+        switch (soulState)
         {
-            case GolemState.Idle:
+            case SoulState.Idle:
                 waitTimer -= Time.deltaTime;
                 if (waitTimer <= 0)
                 {
-                    golemState = GolemState.Walking;
+                    soulState = SoulState.Running;
                 }
                 break;
 
-            case GolemState.Walking:
+            case SoulState.Running:
                 Vector3 destination = player.transform.position;
                 Vector3 source = transform.position;
                 Vector3 direction = destination - source;
@@ -81,19 +80,19 @@ public class GolemBoss : MonoBehaviour
                     speed = baseSpeed * 3;
                 }
                 float distance = Vector3.Distance(transform.position, player.transform.position);
-                animator.SetBool("isWalking", true);
-                if (distance < 5f)
+                animator.SetBool("IsRunning", true);
+                if (distance < 1.5f)
                 {
-                    golemState = GolemState.Attacking;
+                    soulState = SoulState.Attacking;
                 }
                 break;
 
 
-            case GolemState.Attacking:
-                animator.SetBool("isWalking", false);
+            case SoulState.Attacking:
+                animator.SetBool("IsRunning", false);
                 animator.SetTrigger("Attack");
-                golemState = GolemState.Idle;
-                waitTimer = 2f;
+                soulState = SoulState.Idle;
+                waitTimer = 0.5f;
 
                 break;
 
@@ -114,7 +113,7 @@ public class GolemBoss : MonoBehaviour
             player1.OnDamage();
         }
     }
-    
+
 
 
 
@@ -139,46 +138,12 @@ public class GolemBoss : MonoBehaviour
         StartCoroutine(InvincibilityCoroutine());
         if (currentBossHP <= 0)
         {
-            
+
             Instantiate(levelCrystal, transform.position, Quaternion.identity);
             Instantiate(Gold, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            SceneManager.LoadScene("Level2");
-            
-
+            SceneManager.LoadScene("EndGame");
 
         }
     }
-
-    internal void SpawnGolemArm()
-    {
-        var golem = transform.position;
-        //giant.y = 0;
-
-        var targetPos = player.transform.position;
-        //targetPos.y = 0;
-
-        Vector3 points = (targetPos - golem);
-
-        float angle = Mathf.Atan2(points.y, points.x) * Mathf.Rad2Deg;
-
-        Instantiate(golemArm, transform.position, Quaternion.Euler(0, 0, angle));
-
-    }
-
-    //IEnumerator BossCameraCoroutine()
-    //{
-    //    Time.timeScale = 0;
-    //    Camera.main.GetComponent<PlayerCamera>().target = transform;
-    //    yield return new WaitForSecondsRealtime(5f);
-    //    Camera.main.GetComponent<PlayerCamera>().target = Julius.transform;
-    //    yield return new WaitForSecondsRealtime(1f);
-    //    Time.timeScale = 1;
-
-    //}
-
-
-
-
-
 }

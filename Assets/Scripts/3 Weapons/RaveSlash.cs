@@ -23,7 +23,7 @@ public class RaveSlash : MonoBehaviour
         {
             enemy.Damage(2);
         }
-        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
+        SoulSlicer golemBoss = collision.GetComponent<SoulSlicer>();
         if (golemBoss != null)
         {
             golemBoss.Damage(2);

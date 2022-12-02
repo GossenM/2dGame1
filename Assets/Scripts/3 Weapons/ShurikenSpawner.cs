@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class KunaiSpawner : BaseWeapon
+public class ShurikenSpawner : BaseWeapon
 {
-    [SerializeField] GameObject iceSpike1;
-    [SerializeField] GameObject iceSpike2;
-    [SerializeField] GameObject iceSpike3;
+    [SerializeField] GameObject shurikenTop;
+    [SerializeField] GameObject shurikenMiddle;
+    [SerializeField] GameObject shurikenBottom;
     [SerializeField] GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -34,9 +34,9 @@ public class KunaiSpawner : BaseWeapon
                 yield return new WaitForSeconds(2f);
 
 
-                Instantiate(iceSpike1, transform.position, Quaternion.identity);
-                Instantiate(iceSpike2, transform.position, Quaternion.identity);
-                Instantiate(iceSpike3, transform.position, Quaternion.identity);
+                Instantiate(shurikenTop, transform.position, Quaternion.Euler(0, 0, 0));
+                Instantiate(shurikenMiddle, transform.position, Quaternion.Euler(0, 0, 0));
+                Instantiate(shurikenBottom, transform.position, Quaternion.Euler(0, 0, 0));
 
             }
 

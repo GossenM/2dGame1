@@ -246,7 +246,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1441
-        y: 1344
+        y: 833
         width: 191
         height: 192
       alignment: 0
@@ -258,6 +258,69 @@ TextureImporter:
       bones: []
       spriteID: 1f0fa79b5be619f4790a125a736a0401
       internalID: 1376119876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainLev2.0_7
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 0
+        width: 252
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6a63e4440972743a01ef5653130e02
+      internalID: 1898221376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainLev2.0_8
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 0
+        width: 225
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5530524817644a7448364e486cd88dc5
+      internalID: -1316346734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainLev2.0_9
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 316
+        width: 160
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a678e70f5baef4389d50f42f232fc8
+      internalID: 246264019
       vertices: []
       indices: 
       edges: []
@@ -274,9 +337,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MainLev2.0_5: 575765354
+      MainLev2.0_8: -1316346734
+      MainLev2.0_9: 246264019
       MainLev2.0_0: 1532235865
       MainLev2.0_4: 1713011493
       MainLev2.0_6: 1376119876
+      MainLev2.0_7: 1898221376
       MainLev2.0_3: -995827460
       MainLev2.0_2: -198203240
       MainLev2.0_1: -906618282

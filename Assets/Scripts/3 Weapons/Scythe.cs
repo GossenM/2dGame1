@@ -16,7 +16,7 @@ public class Scythe : BaseWeapon
         {
             enemy.Damage(2);
         }
-        GolemBoss roboDuck = collision.GetComponent<GolemBoss>();
+        SoulSlicer roboDuck = collision.GetComponent<SoulSlicer>();
         if (roboDuck != null)
         {
             roboDuck.Damage(2);

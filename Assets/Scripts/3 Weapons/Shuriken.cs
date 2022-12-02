@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kunai : BaseWeapon
+public class Shuriken : BaseWeapon
 {
     [SerializeField] float y;
 
@@ -10,6 +10,8 @@ public class Kunai : BaseWeapon
     GameObject player;
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider;
+
+    internal float timeBetweenShuriken = 4f;
 
     int a = 0;
     int b = 0;
@@ -23,7 +25,7 @@ public class Kunai : BaseWeapon
         player = GameObject.FindGameObjectWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
-        StartCoroutine(IceSpikeCoroutine());
+        StartCoroutine(ShurikenCoroutine());
 
     }
 
@@ -32,13 +34,16 @@ public class Kunai : BaseWeapon
     void RotateByDegrees()
     {
         Vector3 rotationToAdd = new Vector3(0, 0, 0.3f);
-        //transform.Rotate(rotationToAdd);
+        transform.Rotate(rotationToAdd);
     }
-    // Update is called once per frame
+    
     void Update()
     {
-        //RotateByDegrees();
 
+        if (level > 1)
+        {
+            timeBetweenShuriken = timeBetweenShuriken - 0.5f;
+        }
 
         if (player != null)
         {
@@ -98,30 +103,26 @@ public class Kunai : BaseWeapon
         if (enemy != null)
         {
             enemy.Damage(3);
+ 
         }
-        GolemBoss golemBoss = collision.GetComponent<GolemBoss>();
+        SoulSlicer golemBoss = collision.GetComponent<SoulSlicer>();
         if (golemBoss != null)
         {
             golemBoss.Damage(3);
+            
         }
 
 
     }
 
-    IEnumerator IceSpikeCoroutine()
+    IEnumerator ShurikenCoroutine()
     {
-
-
-
+        
         boxCollider.enabled = true;
         spriteRenderer.enabled = true;
-        yield return new WaitForSeconds(5f);
-
+        yield return new WaitForSeconds(timeBetweenShuriken);
 
         boxCollider.enabled = false;
         spriteRenderer.enabled = false;
-
-
-
     }
 }

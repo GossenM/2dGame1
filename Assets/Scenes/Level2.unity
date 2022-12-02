@@ -12730,8 +12730,8 @@ MonoBehaviour:
     enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
     count: 1
   - name: Prepare For the Stone
-    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
-    enemy2: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+    enemy: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
+    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
     count: 1
   timeBewteenWaves: 4
   waveCountdown: 5
@@ -12750,6 +12750,7 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
   golemBoss: {fileID: 0}
+  soulSlicer: {fileID: 0}
   timerText: {fileID: 958855459}
   healthOrbs: {fileID: 7249512719313413497, guid: a0109274614d39842a8507230cbfe41c, type: 3}
   healthOrbs50: {fileID: 4185950175220717326, guid: a40054a357ff8b641b9fa0291ad6d1c9, type: 3}

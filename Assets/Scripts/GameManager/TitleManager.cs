@@ -141,7 +141,7 @@ public class TitleManager : MonoBehaviour
         rave.level++;
         LevelUpandPlay();
     }
-    public void RaveKunaiSpawner()
+    public void RaveShurikenSpawner()
     {
         rave.weapons[2].levelUp();
         LevelUpandPlay();

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SimpleObjectPool : MonoBehaviour
 {
-    [SerializeField] GameObject objectPrefab;
+    [SerializeField] GameObject shurikenTop;
+    [SerializeField] GameObject shurikenMiddle;
+    [SerializeField] GameObject shurikenBottom;
        
     List<GameObject> pooledObjects = new List<GameObject>();
 
@@ -12,9 +14,11 @@ public class SimpleObjectPool : MonoBehaviour
     
     private void Awake()
     {
-        for( int i = 0; i < 1000; i++ )
+        for( int i = 0; i < 100; i++ )
         {
-            pooledObjects.Add(Instantiate(objectPrefab));
+            pooledObjects.Add(Instantiate(shurikenTop));
+            pooledObjects.Add(Instantiate(shurikenMiddle));
+            pooledObjects.Add(Instantiate(shurikenBottom));
         }
     }
 
@@ -24,13 +28,5 @@ public class SimpleObjectPool : MonoBehaviour
         return pooledObjects[objectIndex++];
     }
 
-    //CREATE A EMPTY IN HIGHARCHY AND DRAG THIS SCRIPT IN IT
-    //deactivate weapon or projectile in inspector 
-    //in weaponSpawner ask pool for a new object
-    //Create a serialized field inside of the weaponSpawner script to get the simple object pool script
-    //call Get() method 
-    //transform the position to make the weapon be a projectile
-    //After make it active ( weapon.SetActive(true) ) 
-    //in ontriggerenter2d after contact gameObject.SetActive(false)
     
 }

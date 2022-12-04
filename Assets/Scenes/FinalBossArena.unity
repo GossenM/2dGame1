@@ -8162,8 +8162,8 @@ MonoBehaviour:
   healthIncreaseBTN: {fileID: 0}
   goldCoinsTXT: {fileID: 0}
   particleSystem: {fileID: 1456010713}
-  playerCamera: {fileID: 0}
   heroMenu: {fileID: 0}
+  playerCamera: {fileID: 0}
 --- !u!4 &1944841542
 Transform:
   m_ObjectHideFlags: 0

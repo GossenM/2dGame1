@@ -9,23 +9,13 @@ public class ShurikenSpawner : BaseWeapon
     [SerializeField] GameObject shurikenMiddle;
     [SerializeField] GameObject shurikenBottom;
     [SerializeField] GameObject player;
-    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnDaggerCoroutine());
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        StartCoroutine(SpawnShurikenCoroutine());
 
     }
 
-
-
-    IEnumerator SpawnDaggerCoroutine()
+    IEnumerator SpawnShurikenCoroutine()
     {
         while (true)
         {

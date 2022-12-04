@@ -51,11 +51,11 @@ public class Enemy : MonoBehaviour
         Rave player1 = collision.GetComponent<Rave>();
         if (player)
         {
-            player.OnDamage();
+            player.OnDamage(1);
         }
         if (player1)
         {
-            player1.OnDamage();
+            player1.OnDamage(1);
         }
     }
 

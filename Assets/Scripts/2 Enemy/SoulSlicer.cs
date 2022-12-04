@@ -81,7 +81,7 @@ public class SoulSlicer : MonoBehaviour
                 }
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 animator.SetBool("IsRunning", true);
-                if (distance < 1.5f)
+                if (distance < 2f)
                 {
                     soulState = SoulState.Attacking;
                 }
@@ -92,7 +92,7 @@ public class SoulSlicer : MonoBehaviour
                 animator.SetBool("IsRunning", false);
                 animator.SetTrigger("Attack");
                 soulState = SoulState.Idle;
-                waitTimer = 0.5f;
+                waitTimer = 1f;
 
                 break;
 
@@ -106,11 +106,11 @@ public class SoulSlicer : MonoBehaviour
         Rave player1 = collision.GetComponent<Rave>();
         if (player)
         {
-            player.OnDamage();
+            player.OnDamage(1);
         }
         if (player1)
         {
-            player1.OnDamage();
+            player1.OnDamage(1);
         }
     }
 

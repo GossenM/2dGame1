@@ -22,11 +22,11 @@ public class GolemArm : MonoBehaviour
         Rave player1 = collision.GetComponent<Rave>();
         if (player)
         {
-            player.OnDamage();
+            player.OnDamage(3);
         }
         if (player1)
         {
-            player1.OnDamage();
+            player1.OnDamage(3);
         }
     }
 }

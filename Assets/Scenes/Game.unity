@@ -5326,7 +5326,7 @@ PrefabInstance:
       objectReference: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: maxHp
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: katana
@@ -5338,7 +5338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: playerHP
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: collider2D
@@ -5354,7 +5354,7 @@ PrefabInstance:
       objectReference: {fileID: 15580688}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: currentMaxHp
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: levelDisplay
@@ -12280,41 +12280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   waves:
-  - name: Merman
-    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
-    enemy2: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
-    count: 5
   - name: crawler
-    enemy: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    count: 2
-  - name: zombie
-    enemy: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
-    enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
-    count: 2
-  - name: Vamp
-    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
-    enemy2: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
-    count: 2
-  - name: Giant
-    enemy: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
-    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
-    count: 1
-  - name: 'Wave '
-    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
-    enemy2: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
-    count: 7
-  - name: VampGamp
-    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
-    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
-    count: 2
-  - name: Giant
-    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
-    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
-    count: 2
-  - name: boss
-    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
-    enemy2: {fileID: 9136785079695526445, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+    enemy: {fileID: 500460668340000577, guid: 9dc7bdcb92851194ca28a11d8ce79ece, type: 3}
+    enemy2: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
     count: 1
   timeBewteenWaves: 5
   waveCountdown: 5
@@ -15330,7 +15298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0025177002}
+  m_AnchoredPosition: {x: 0, y: -0.000014609}
   m_SizeDelta: {x: 2042.6, y: 994.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099335278
@@ -15345,8 +15313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 5e7a5574b259fdb4da360df06bace90e, type: 2}
-  m_Color: {r: 0.23584908, g: 0.2302866, b: 0.2302866, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16108,7 +16076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 5e7a5574b259fdb4da360df06bace90e, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -17161,8 +17129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 5e7a5574b259fdb4da360df06bace90e, type: 2}
-  m_Color: {r: 0.2735849, g: 0.2542275, b: 0.2542275, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18626,9 +18594,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   speed: 7
   baseSpeed: 7
-  playerHP: 10
-  maxHp: 10
-  currentMaxHp: 10
+  playerHP: 12
+  maxHp: 12
+  currentMaxHp: 12
   healthOrbs: 2
   healthOrbs50: 5
   isInvincible: 0

@@ -125,18 +125,18 @@ public class Julius : MonoBehaviour
             playerHP = playerHP + healthOrbs50;
         }
     }
-    public bool OnDamage()
+    public bool OnDamage(int damage)
     {
 
         if (!isInvincible)
         {
-            
+            playerHP -= damage;
             StartCoroutine(InvincibilityCoroutine());
             isInvincible = true;
             playerCamera.StartShake(0.05f, 0.2f);
 
 
-            if (--playerHP == 0)
+            if (playerHP <= 0)
             {
                 
                 StartCoroutine(DeathCoroutine());
@@ -153,7 +153,7 @@ public class Julius : MonoBehaviour
         isInvincible = true;
         //spriteRenderer.color = Color.red;
         material.SetFloat("_Flash", 0.33f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         //spriteRenderer.color = Color.white;
         material.SetFloat("_Flash", 0);
         isInvincible = false;

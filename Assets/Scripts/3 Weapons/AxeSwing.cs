@@ -22,11 +22,11 @@ public class AxeSwing : MonoBehaviour
         Rave player1 = collision.GetComponent<Rave>();
         if (player)
         {
-            player.OnDamage();
+            player.OnDamage(2);
         }
         if (player1)
         {
-            player1.OnDamage();
+            player1.OnDamage(2);
         }
     }
 }

@@ -19,7 +19,6 @@ public class TitleManager : MonoBehaviour
     [SerializeField] Button healthIncreaseBTN;
     [SerializeField] TMP_Text goldCoinsTXT;
     [SerializeField] ParticleSystem particleSystem;
-    [SerializeField] PlayerCamera playerCamera;
     [SerializeField] GameObject heroMenu;
 
 
@@ -94,6 +93,10 @@ public class TitleManager : MonoBehaviour
     {
         SceneManager.LoadScene("Upgrade");
 
+    }
+    public void PostProcessBtn()
+    {
+        
     }
     public void HeroesBtn()
     {

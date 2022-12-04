@@ -25,9 +25,9 @@ public class BossHpBar : MonoBehaviour
         }
         else if(golemBoss != null)
         {
-            transform.position = soulSlicer.transform.position + new Vector3(0, 0.75f, 0);
+            transform.position = golemBoss.transform.position + new Vector3(0, 0.75f, 0);
 
-            float hpRatio = (float)golemBoss.BossHP / golemBoss.currentBossHP;
+            float hpRatio = (float)golemBoss.currentBossHP / golemBoss.BossHP;
             foreground.transform.localScale = new Vector3(hpRatio, 1, 1);
         }
 

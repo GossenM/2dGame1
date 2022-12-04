@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 27280325}
     - target: {fileID: 158938411240265203, guid: fe70d50b13d60604a81da86eeda5699f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 158938411240265203, guid: fe70d50b13d60604a81da86eeda5699f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5362,7 +5362,7 @@ PrefabInstance:
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: goldDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 451435564}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: levelUpMenu
       value: 
@@ -5374,15 +5374,15 @@ PrefabInstance:
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: levelDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 604864537}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: playerCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2010505415}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: RaveLevelUpMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 308107309}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: raveSlashPrefab
       value: 
@@ -5445,7 +5445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063392, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063392, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5493,7 +5493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063396, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063404, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_BodyType
@@ -8055,7 +8055,7 @@ MonoBehaviour:
   enemy: {fileID: 2335577294657992221, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
   golemBoss: {fileID: 0}
   soulSlicer: {fileID: 5094231955126784136, guid: 9dc7bdcb92851194ca28a11d8ce79ece, type: 3}
-  timerText: {fileID: 0}
+  timerText: {fileID: 1951001650}
   healthOrbs: {fileID: 7249512719313413497, guid: a0109274614d39842a8507230cbfe41c, type: 3}
   healthOrbs50: {fileID: 4185950175220717326, guid: a40054a357ff8b641b9fa0291ad6d1c9, type: 3}
   superP: {fileID: 8372782876238460154, guid: c22c446d4edcc63488114e663c09ab1c, type: 3}
@@ -8177,7 +8177,7 @@ RectTransform:
   - {fileID: 91512550}
   - {fileID: 308107310}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8414,7 +8414,7 @@ Transform:
   - {fileID: 108939221}
   - {fileID: 704367400}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941239507
 GameObject:

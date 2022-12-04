@@ -30,13 +30,14 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         waveCountdown = timeBewteenWaves;
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
     void Update()
     {
-        if(state == SpawnState.WAITING)
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (state == SpawnState.WAITING)
         {
             if (!EnemyIsAlive())
             {
@@ -67,17 +68,17 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.COUNTING;
         waveCountdown = timeBewteenWaves;
 
-        if(nextWave + 1 > waves.Length - 1)
-        {
-            nextWave = 0;
-            Debug.Log("All Waves Complete! Looping...");
-        }
-        else
-        {
+        //if(nextWave + 1 > waves.Length - 1)
+        //{
+        //    nextWave = 0;
+        //    Debug.Log("All Waves Complete! Looping...");
+        //}
+        //else
+        //{
             nextWave++;
-            _wave.count = _wave.count + 1;
+            //_wave.count = _wave.count + 2;
 
-        }
+        //}
 
     }
     bool EnemyIsAlive()

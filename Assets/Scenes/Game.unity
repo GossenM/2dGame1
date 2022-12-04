@@ -5248,7 +5248,7 @@ PrefabInstance:
       objectReference: {fileID: 3443047065090809893, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: maxHp
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: katana
@@ -5260,7 +5260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: playerHP
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: collider2D
@@ -5276,7 +5276,7 @@ PrefabInstance:
       objectReference: {fileID: 15580688}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: currentMaxHp
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1394085681159271123, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: levelDisplay
@@ -12215,7 +12215,23 @@ MonoBehaviour:
     enemy: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
     enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
     count: 1
-  timeBewteenWaves: 9
+  - name: 'Wave '
+    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    enemy2: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
+    count: 7
+  - name: VampGamp
+    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
+    count: 2
+  - name: Giant
+    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    enemy2: {fileID: 8087327014899235763, guid: 28ba85278d765894fbd1b35fc2dcf916, type: 3}
+    count: 2
+  - name: boss
+    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+    enemy2: {fileID: 9136785079695526445, guid: 73beea569377beb458feb71d59c03cf5, type: 3}
+    count: 1
+  timeBewteenWaves: 5
   waveCountdown: 5
 --- !u!114 &583392532 stripped
 MonoBehaviour:

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         StartCoroutine(SpawnItems());
-        StartCoroutine(SpawnGolemBoss(golemBoss, 1));
+        //StartCoroutine(SpawnGolemBoss(golemBoss, 1));
         if (HeroManager.isRave == true)
         {
             rave.SetActive(true);

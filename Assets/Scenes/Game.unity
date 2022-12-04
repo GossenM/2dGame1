@@ -5400,7 +5400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614252063396, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5726440614299326691, guid: 8196800150af5c046a33b91d17a82981, type: 3}
       propertyPath: rave
@@ -16136,8 +16136,8 @@ MonoBehaviour:
   healthIncreaseBTN: {fileID: 0}
   goldCoinsTXT: {fileID: 0}
   particleSystem: {fileID: 765813526}
-  playerCamera: {fileID: 0}
   heroMenu: {fileID: 0}
+  playerCamera: {fileID: 0}
 --- !u!4 &1271004084
 Transform:
   m_ObjectHideFlags: 0

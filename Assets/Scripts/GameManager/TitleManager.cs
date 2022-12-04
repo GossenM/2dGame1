@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.Burst.CompilerServices;
 using static Cinemachine.DocumentationSortingAttribute;
+using UnityEngine.Rendering.Universal;
 
 public class TitleManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] TMP_Text goldCoinsTXT;
     [SerializeField] ParticleSystem particleSystem;
     [SerializeField] GameObject heroMenu;
+    public PlayerCamera playerCamera;
 
 
     public static SaveData saveData;
@@ -94,9 +96,9 @@ public class TitleManager : MonoBehaviour
         SceneManager.LoadScene("Upgrade");
 
     }
-    public void PostProcessBtn()
+    public void PostProcessBtn(bool value)
     {
-        
+       
     }
     public void HeroesBtn()
     {

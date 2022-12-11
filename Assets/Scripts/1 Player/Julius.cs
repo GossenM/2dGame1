@@ -70,7 +70,10 @@ public class Julius : MonoBehaviour
             transform.localScale = new Vector3(inputX > 0 ? -1 :  1, 1, 1);
         }
         bool isRunning = (inputX != 0 || inputY != 0);
-        animator.SetBool("isRunning", isRunning);
+        if (HeroManager.isJulius == true)
+        {
+            animator.SetBool("isRunning", isRunning); 
+        }
 
         levelDisplay.text = currentLevel.ToString();
         goldDisplay.text = TitleManager.saveData.goldCoins.ToString();

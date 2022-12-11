@@ -14,15 +14,16 @@ public class PlayerCamera : MonoBehaviour
     public float speed = 100f;
     public float smoothSpeed = 0.125f;
 
+    
     Julius julius;
     Rave rave;
-
+    
     internal Volume volume;
     internal Vignette vignette;
     internal DepthOfField depthOfField;
     internal ColorAdjustments colorAdjustments;
 
-    private void Start()
+    public void Start()
     {
         julius = GetComponent<Julius>();
         rave = GetComponent<Rave>();
@@ -30,8 +31,9 @@ public class PlayerCamera : MonoBehaviour
         volume.profile.TryGet(out vignette);
         volume.profile.TryGet(out depthOfField);
         volume.profile.TryGet(out colorAdjustments);
+        PostProcessSwitch();
     }
-    void LateUpdate()
+     public void LateUpdate()
     {
         if (HeroManager.isJulius == true)
         {
@@ -43,7 +45,6 @@ public class PlayerCamera : MonoBehaviour
                 float cameraZ = transform.position.z;
                 var targetPosition = new Vector3(playerX, playerY, cameraZ);
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.unscaledDeltaTime);
-                vignette.intensity.Override(1 - julius.GetHpRatio());
                 transform.position = targetPosition + shakeOffset;
             }
         } 
@@ -57,14 +58,22 @@ public class PlayerCamera : MonoBehaviour
                 float cameraZ = transform.position.z;
                 var targetPosition = new Vector3(playerX, playerY, cameraZ);
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.unscaledDeltaTime);
-                vignette.intensity.Override(1 - rave.GetHpRatio());
                 transform.position = targetPosition + shakeOffset;
             }
         }
         
 
-    }
 
+    }
+    public void ScreenEffects()
+    {
+        vignette.intensity.Override(1 - julius.GetHpRatio());
+        //vignette.intensity.Override(1 - rave.GetHpRatio());
+    }
+    public void PostProcessSwitch()
+    {
+        volume.enabled = TitleManager.saveData.postProcessSwitch;
+    }
     public IEnumerator Shake(float duration, float magnitude)
     {
         Vector3 orignalPosition = transform.position;

@@ -27,6 +27,7 @@ public class SoulSlicer : MonoBehaviour
     public bool isInvincible;
 
     private Animator animator;
+    Material material;
     enum SoulState : int
     {
         Idle = 0,
@@ -43,7 +44,7 @@ public class SoulSlicer : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentBossHP = BossHP;
-
+        material = spriteRenderer.material;
     }
 
 
@@ -81,7 +82,7 @@ public class SoulSlicer : MonoBehaviour
                 }
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 animator.SetBool("IsRunning", true);
-                if (distance < 2f)
+                if (distance < 1.5f)
                 {
                     soulState = SoulState.Attacking;
                 }
@@ -92,7 +93,7 @@ public class SoulSlicer : MonoBehaviour
                 animator.SetBool("IsRunning", false);
                 animator.SetTrigger("Attack");
                 soulState = SoulState.Idle;
-                waitTimer = 1f;
+                waitTimer = 3f;
 
                 break;
 
@@ -120,9 +121,11 @@ public class SoulSlicer : MonoBehaviour
     IEnumerator InvincibilityCoroutine()
     {
         isInvincible = true;
-        spriteRenderer.color = Color.red;
+        material.SetFloat("_Flash", 0.33f);
+        //spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
+        material.SetFloat("_Flash", 0);
+        //spriteRenderer.color = Color.white;
         isInvincible = false;
 
     }

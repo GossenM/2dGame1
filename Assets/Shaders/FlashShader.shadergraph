@@ -122,8 +122,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 45.99995040893555,
-            "y": -70.99999237060547
+            "x": 259.0,
+            "y": -136.00001525878907
         },
         "m_Blocks": [
             {
@@ -139,8 +139,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 45.99996566772461,
-            "y": 124.0
+            "x": 259.0,
+            "y": 143.00001525878907
         },
         "m_Blocks": [
             {
@@ -216,10 +216,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -243.00003051757813,
-            "y": 139.00001525878907,
-            "width": 208.00001525878907,
-            "height": 302.0
+            "x": -122.00003814697266,
+            "y": 35.000003814697269,
+            "width": 208.0,
+            "height": 301.9999694824219
         }
     },
     "m_Slots": [
@@ -370,10 +370,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -845.0000610351563,
-            "y": 34.99999237060547,
-            "width": 129.0,
-            "height": 34.00000762939453
+            "x": -941.0,
+            "y": 35.0000114440918,
+            "width": 129.00006103515626,
+            "height": 34.000003814697269
         }
     },
     "m_Slots": [
@@ -606,10 +606,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -621.0,
-            "y": 69.0,
-            "width": 207.99993896484376,
-            "height": 435.0000305175781
+            "x": -665.0,
+            "y": -21.999984741210939,
+            "width": 208.00003051757813,
+            "height": 435.0
         }
     },
     "m_Slots": [
@@ -690,8 +690,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -383.0,
-            "y": 273.0,
+            "x": -364.0,
+            "y": 89.00000762939453,
             "width": 103.0,
             "height": 34.0
         }
@@ -748,7 +748,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"b00085b5fb3867f479f34a12f4ec7f23\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,

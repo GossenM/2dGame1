@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.U2D.Path;
 using UnityEngine;
 public class Enemy : MonoBehaviour
 {

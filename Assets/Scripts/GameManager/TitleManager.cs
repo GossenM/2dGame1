@@ -19,7 +19,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] Button katanaDmgIncreaseBTN;
     [SerializeField] Button healthIncreaseBTN;
     [SerializeField] TMP_Text goldCoinsTXT;
-    [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] new ParticleSystem particleSystem;
     [SerializeField] GameObject heroMenu;
     public PlayerCamera playerCamera;
 
@@ -27,6 +27,10 @@ public class TitleManager : MonoBehaviour
     public static SaveData saveData;
     string SavePath => Path.Combine(Application.persistentDataPath, "save.data");
 
+    private void Start()
+    {
+        
+    }
     private void Awake()
     {
         if (saveData == null)
@@ -96,9 +100,13 @@ public class TitleManager : MonoBehaviour
         SceneManager.LoadScene("Upgrade");
 
     }
-    public void PostProcessBtn(bool value)
+    public void PostProcessOn()
     {
-       
+        saveData.postProcessSwitch = true;
+    }
+    public void PostProcessOff()
+    {
+        saveData.postProcessSwitch = false;
     }
     public void HeroesBtn()
     {

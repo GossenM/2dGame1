@@ -68,19 +68,11 @@ public class GameManager : MonoBehaviour
             timerText.text = "0" + minutes.ToString() + ":" + seconds.ToString();
         }
 
-        
-        //if (sceneName == "Level2")
-        //{
-        //    StartCoroutine(FinalArenaCountdown()); 
-        //}
-        //if (sceneName == "FinalBossArena")
-        //{
-        //    StopCoroutine(FinalArenaCountdown());
-        //    StartCoroutine(SpawnSoulSlicer(soulSlicer, 1));
-        //}
+
 
 
     }
+    
 
     IEnumerator FinalArenaCountdown()
     {

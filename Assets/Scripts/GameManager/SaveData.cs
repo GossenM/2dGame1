@@ -22,6 +22,9 @@ public class SaveData
     public int totalVampireKilled;
     public int totalGiantKilled;
     public int totalDemonKilled;
+    //settings menu variables
+    public bool postProcessSwitch = true;
+    
 
     
 }

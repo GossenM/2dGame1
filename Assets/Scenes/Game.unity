@@ -12280,9 +12280,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   waves:
+  - name: Merman
+    enemy: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    enemy2: {fileID: 7076283354764955592, guid: e851a030c8d93d741bdaf65384ce51ef, type: 3}
+    count: 5
   - name: crawler
-    enemy: {fileID: 500460668340000577, guid: 9dc7bdcb92851194ca28a11d8ce79ece, type: 3}
-    enemy2: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+    enemy: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
+    enemy2: {fileID: 8966644094808763704, guid: f42f29d03fc906e48891b62a38a9ed39, type: 3}
+    count: 15
+  - name: zombie
+    enemy: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
+    enemy2: {fileID: 7027353842287694206, guid: f482a130c55553244a3b50f189fda4a6, type: 3}
+    count: 3
+  - name: vamp mode
+    enemy: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    enemy2: {fileID: 486670420603998866, guid: 4095b8c6a02a08b41b4fd29b9c0ae89b, type: 3}
+    count: 2
+  - name: boss
+    enemy: {fileID: 5288414688026477442, guid: 551da65fc1606f040a4601db2dbca95b, type: 3}
+    enemy2: {fileID: 0}
     count: 1
   timeBewteenWaves: 5
   waveCountdown: 5
@@ -15314,7 +15330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17379,7 +17395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1480159978
 MonoBehaviour:
   m_ObjectHideFlags: 0

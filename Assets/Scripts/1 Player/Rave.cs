@@ -21,14 +21,14 @@ public class Rave : Julius
 
     public KeyCode slashKey = KeyCode.Space;
 
-    internal Animator animator;
+    internal Animator animatorRave;
     public bool canSlash = false;
     internal int level;
 
     protected override void Start()
     {
-        animator = GetComponent<Animator>();
-        animator.SetBool("IsAttacking", true);
+        animatorRave = GetComponent<Animator>();
+        animatorRave.SetBool("IsAttacking", true);
         base.Start();
     }
     protected override void Update()

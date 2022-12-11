@@ -444,8 +444,8 @@ MonoBehaviour:
   CrystalPrefab: {fileID: 5306765820107583781, guid: 589f1859aacd8df4990e31f72f06f7a2, type: 3}
   Gold: {fileID: 1282490758793302411, guid: 9a5db5531b5e7f540affbda3bb07307d, type: 3}
   spriteRenderer: {fileID: 7213333173365239857}
-  enemyHP: 5
-  enemyMaxHP: 5
+  enemyHP: 6
+  enemyMaxHP: 6
   isTrackingPlayer: 1
   isInvincible: 0
 --- !u!1 &4105951035399394988

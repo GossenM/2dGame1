@@ -5303,8 +5303,8 @@ MonoBehaviour:
   healthIncreaseBTN: {fileID: 0}
   goldCoinsTXT: {fileID: 0}
   particleSystem: {fileID: 2010505418}
-  playerCamera: {fileID: 2010505415}
   heroMenu: {fileID: 0}
+  playerCamera: {fileID: 2010505415}
 --- !u!4 &544552851
 Transform:
   m_ObjectHideFlags: 0
@@ -8022,20 +8022,8 @@ MonoBehaviour:
   player: {fileID: 0}
   waves:
   - name: Charge
-    enemy: {fileID: 6248342091259979692, guid: 775e4a65f22734445ae8215ac79ebe21, type: 3}
-    enemy2: {fileID: 6248342091259979692, guid: 775e4a65f22734445ae8215ac79ebe21, type: 3}
-    count: 5
-  - name: 'He is coming '
-    enemy: {fileID: 6248342091259979692, guid: 775e4a65f22734445ae8215ac79ebe21, type: 3}
-    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
-    count: 2
-  - name: 'he is back from the dead '
-    enemy: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
-    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
-    count: 1
-  - name: Prepare For the Stone
-    enemy: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
-    enemy2: {fileID: 7427436859479332550, guid: ab63a83b6379eac41bbb00c34a002a2a, type: 3}
+    enemy: {fileID: 500460668340000577, guid: 9dc7bdcb92851194ca28a11d8ce79ece, type: 3}
+    enemy2: {fileID: 0}
     count: 1
   timeBewteenWaves: 4
   waveCountdown: 5
